@@ -1,0 +1,90 @@
+[
+  {
+    "projectTitle": "Games Manager",
+    "category": "web",
+    "description": "Angular, TypeScript, js, Jira, Git, Scss, Css3, UML, Docker, MongoDB, RESTful API, HTML5, Studio 3T, Gitlab, Kubernetes, Adobe XD, Azure AD",
+    "technologies": ["angular", "js", "jira", "git", "sass", "css3",  "docker", "database", "html5"],
+    "imageSrc": "https://storage.googleapis.com/turing_developers/portfolio/1675413817654_mintenancce%20import.png",
+    "date": ""
+  },
+  {
+    "projectTitle": "MyQuest Inc.",
+    "category": "web",
+    "description": "js, Jira, PHP, Yii2, Git, Sass, UML, Docker, PostgreSQL, sql, Redis, ,RESTful API, HTML5, Vue3",
+    "technologies": ["js", "jira", "php", "git", "sass", "css3", "docker", "database", "html5", "vuejs"],
+    "imageSrc": "assets/images/portfolio/my-quest-questpage.png",
+    "date": ""
+  },
+  {
+    "projectTitle": "PARGOPOINTS (PTY) LTD",
+    "category": "web",
+    "description": "js, Slack, Jira, PHP, Laravel, Git, Sass, UML, GitFlow, Docker, Pusher, PHPUnit,jQuery, PostgreSQL, MariaDB, sql, Redis, CSS3, ,RESTful API Design, High-Level Design, HTML5, npm, Grunt, gulp, Agile, Scrum, Websockets, VPN",
+    "technologies": ["js", "slack", "jira", "php", "laravel", "git", "sass", "docker", "database", "css3", "html5", "npm", "grunt", "gulp","google","angular","react"],
+    "imageSrc": "https://storage.googleapis.com/turing_developers/portfolio/1666644514950_bid-map.gif",
+    "date": ""
+  },
+  {
+    "projectTitle": "Sanlam Reality",
+    "category": "web",
+    "description": "js, WordPress, Slack, Microsoft Teams, Jira, PHP, Laravel, Git, Bitbucket, Sass, UML, Microsoft Visio, Miro, GitFlow, Docker, Pusher, PHPUnit,jQuery, MariaDB, sql, Redis, CSS3, API Design, ,RESTful API Design, soap2 API Design, High-Level Design, Node.js, React Native, HTML5, npm, Grunt, gulp, Agile, Scrum, Bamboo, XL Release, XL Deploy, StarUML, Websockets, VPN, Citrix, Bomgar, Selenium Webdriver, Selenium IDE, Codeception",
+    "technologies": ["js", "wordpress", "slack", "jira", "php", "laravel", "git", "sass", "docker", "database", "css3", "node", "react", "html5", "npm", "grunt", "gulp"],
+    "imageSrc": "https://storage.googleapis.com/turing_developers/portfolio/1643614325142_Screenshot%202022-01-31%20at%2009.32.52.png",
+    "date": ""
+  },
+  {
+    "projectTitle": "Eeezipay Management Systems",
+    "category": "web",
+    "description": "PHP 7, Node, ReactJs, Docker, Docker Compose, Websockets, Java, Maven, PostgreSQL, js, TypeScript, sql",
+    "technologies": ["php", "laravel", "node", "react", "docker", "java",  "js", "html5","css3", "sass","npm","grunt","gulp","bootstrap", "database","jira","git"],
+    "imageSrc": "https://storage.googleapis.com/turing_developers/portfolio/1643610964176_banner-1.png",
+    "date": ""
+  },
+  {
+    "projectTitle": "Snapplify ecommerce",
+    "category": "web",
+    "description": "Linux, NGINX, FPM, MariaDB, PHP, ElasticSearch, RabbitMQ, Docker Compose, Docker Containers, Vagrant, Webpack, NPM, Composer, GIT, GITFlow, Bitbucket, Symfony2, CSS3, OAUTH2, SOA, SaaS, SLACK, Google Apps, Harvest, soap2, TargetProcess, Supervisor, PHPUnit, Codeception, js, JQuery, Bootstrap 3, SaaS, SOA, OOP, MVC, Design Patterns",
+    "technologies": ["linux", "database", "php", "node", "docker", "npm", "git","symfony", "angular", "html5","css3",  "sass", "slack", "google", "js", "bootstrap","jira"],
+    "imageSrc": "https://storage.googleapis.com/turing_developers/portfolio/1648755685939_Screenshot%202022-03-31%20at%2020.40.43.png",
+    "date": ""
+  },
+  {
+    "projectTitle": "Primedia Broadasting",
+    "category": "web",
+    "description": "Bash, Docker, Elasticsearch, Varnish Cache, Redis, AngularJs, Laravel 5, Gulp, SaaS, SOA, Less, RabbitMQ, Memcached, NPM, Bower, GruntJs, Supervisor, PHPUnit, Codeception, js, JQuery, Vagrant, bootstrap, Mustache, REST, soap2, Sentry, NewRelic, OOP, MVC, Design Patterns",
+    "technologies": ["docker", "angular", "react", "laravel", "gulp", "sass", "less","html5","css3", "npm", "grunt", "js", "bootstrap","git","jira"],
+    "imageSrc": "https://storage.googleapis.com/turing_developers/portfolio/1643610974361_primedia-cms-568x436.png",
+    "date": ""
+  },
+  {
+    "projectTitle": "Nifty250",
+    "category": "web",
+    "description": "PHP, sql, js, Memcached, Composer, GIT, PHPTal, Supervisor, EC2, RDS, NMAP, SQLMAP, Codeception, PHPUnit, Behat, Bower, Docker, RabbitMQ, AMQP,NPM, Bootstrap 3, REST, soap2, Subversion, Gitlab, Bitbucket, GitFlow, Yii1 & Yii2, Laravel 4, CakePHP, SCRUM, DotProject, VMWare , soap2, Nagios, SaaS, SOA, OOP, MVC, Design Patterns",
+    "technologies": [ "php", "database", "js", "git", "docker","npm","node","html5","css3", "bootstrap","laravel","jira"],
+    "imageSrc": "https://storage.googleapis.com/turing_developers/portfolio/1648756097290_Screenshot%202022-03-31%20at%2021.52.40.png",
+    "date": ""
+  },
+  {
+    "projectTitle": "Falsebay college",
+    "category": "web",
+    "description": "PHP, sql, js, Memcached, Composer, GIT, PHPTal, Supervisor, EC2, RDS, NMAP, SQLMAP, Codeception, PHPUnit, Behat, Bower, Docker, RabbitMQ, AMQP,NPM, Bootstrap 3, REST, soap2, Subversion, Gitlab, Bitbucket, GitFlow, Yii1 & Yii2, Laravel 4, CakePHP, SCRUM, DotProject, VMWare , soap2, Nagios, SaaS, SOA, OOP, MVC, Design Patterns",
+    "technologies": [ "php", "database", "js", "git", "joomla","html5","css3", "bootstrap","jira"],
+    "imageSrc": "assets/images/portfolio/fb-college.png",
+    "date": ""
+  },
+  {
+    "projectTitle": "Claro",
+    "category": "web",
+    "description": "PHP, sql, js, Memcached, Composer, GIT, PHPTal, Supervisor, EC2, RDS, NMAP, SQLMAP, Codeception, PHPUnit, Behat, Bower, Docker, RabbitMQ, AMQP,NPM, Bootstrap 3, REST, soap2, Subversion, Gitlab, Bitbucket, GitFlow, Yii1 & Yii2, Laravel 4, CakePHP, SCRUM, DotProject, VMWare , soap2, Nagios, SaaS, SOA, OOP, MVC, Design Patterns",
+    "technologies": [ "php", "database", "js", "git", "joomla","html5","css3", "bootstrap","jira"],
+    "imageSrc": "assets/images/portfolio/claroimg.jpg",
+    "date": ""
+  },
+  {
+    "projectTitle": "Boschendal Wines",
+    "category": "web",
+    "description": "PHP, sql, js, jQuery, MsSQL, HTML, CSS, XML, REST, SVN, PHPUnit, JSON, AJAX, Drupal, Java",
+    "technologies": ["php", "database", "js", "html5", "css3-alt", "drupal", "java", "jira"],
+    "imageSrc": "https://storage.googleapis.com/turing_developers/portfolio/1666643449272_Screen%20Shot%202022-10-24%20at%209.48.45%20PM%20Small.jpeg",
+    "date": ""
+  }
+]

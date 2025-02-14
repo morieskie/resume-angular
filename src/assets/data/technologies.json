@@ -1,0 +1,38 @@
+[
+  {
+    "tech": "Laravel",
+    "experience": 9,
+    "competency": 4.5,
+    "color": "red"
+  },
+  {
+    "tech": "Node",
+    "experience": 8,
+    "competency": 4,
+    "color": "yellow"
+  },
+  {
+    "tech": "Symfony",
+    "experience": 2,
+    "competency": 3,
+    "color": "green"
+  },
+  {
+    "tech": "Yii2",
+    "experience": 10,
+    "competency": 4,
+    "color": "black"
+  },
+  {
+    "tech": "GIT",
+    "experience": 10,
+    "competency": 4,
+    "color": "orange"
+  },
+  {
+    "tech": "SELENIUM",
+    "experience": 3,
+    "competency": 3,
+    "color": "pink"
+  }
+]

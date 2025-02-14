@@ -1,0 +1,20 @@
+[
+  {
+    "company": "University of South Africa",
+    "from": "Jan 2014",
+    "to": "Dec 2014",
+    "description": "Java Certification"
+  },
+  {
+    "company": "Stellenbosch University",
+    "from": "Jan 2005",
+    "to": "Dec 2009",
+    "description": "BComm Mathematical Science"
+  },
+  {
+    "company": "Lepelle Senior Secondary School",
+    "from": "Jan 2000",
+    "to": "Dec 2004",
+    "description": "Matriculated"
+  }
+]

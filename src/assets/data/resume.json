@@ -1,0 +1,142 @@
+[
+  {
+    "section": "education",
+    "items": [
+      {
+        "name": "University of South Africa",
+        "startDate": "2014-01-01",
+        "endDate": "2014-12-12",
+        "type": "Certification",
+        "isCompleted": true,
+        "description": "Introduction to Java"
+      },
+      {
+        "name": "University of Stellenbosch",
+        "startDate": "2005-01-01",
+        "endDate": "2007-12-12",
+        "type": "Degree",
+        "isCompleted": false,
+        "description": "Bcomm(Mathematical sciences)"
+      },
+      {
+        "name": "Lepelle Senior Secondary",
+        "startDate": "2001-01-01",
+        "endDate": "2004-12-12",
+        "type": "Matric",
+        "isCompleted": false,
+        "description": "Matriculation"
+      }
+    ]
+  },
+  {
+    "section": "Experience",
+    "items": [
+      {
+        "company": "",
+        "startDate": "",
+        "endDate": "",
+        role: "",
+        e
+        "description": ""
+      },
+      {
+        company: "DigiOutsource (Contracted to Paracon)",
+        from: "Nov 2022",
+        to: "Feb 2023",
+        role: "",
+        description: "Senior Angular Developer"
+      },
+      {
+        company: "MyQuest Inc",
+        from: "Mar 2022",
+        to: "April 2022",
+        role: "",
+        description: "Vue Developer"
+      },
+      {
+        company: "Pargo",
+        from: "Dec 2021",
+        to: "Oct 2021",
+        role: "",
+        description: "Senior Developer"
+      },
+      {
+        company: "Sanlam Reality",
+        from: "Dec 2019",
+        to: "Jul 2021",
+        role: "",
+        description: "Tech Lead"
+      },
+      {
+        company: "Eezipay Management Systems",
+        from: "Sep 2018",
+        to: "Jun 2019",
+        role: "",
+        description: "Senior Full Stack Developer"
+      },
+      {
+        company: "Media24",
+        from: "April 2018",
+        to: "Jun 2018",
+        role: "",
+        description: "Senior PHP Developer"
+      },
+      {
+        company: "Realm Digital & Snapplify",
+        from: "Mar 2017",
+        to: "Jul 2017",
+        role: "",
+        description: "Senior Software Developer"
+      },
+      {
+        company: "Grooveround Pty Ltd",
+        from: "Mar 2016",
+        to: "Dec 2017",
+        role: "",
+        description: "Senior Software Architect"
+      },
+      {
+        company: "Primedia Broadcasting",
+        from: "Jan 2015",
+        to: "Mar 2016",
+        role: "",
+        description: "Senior PHP Developer"
+      },
+      {
+        company: "Double Eye",
+        from: "Dec 2014",
+        to: "Nov 2012",
+        role: "",
+        description: "Senior Middleware Developer"
+      },
+      {
+        company: "The Formula Group",
+        from: "April 2012",
+        to: "Sep 2012",
+        role: "",
+        description: "Technical Lead Developer"
+      },
+      {
+        company: "Bicas SA",
+        from: "Oct 2011",
+        to: "Mar 2012",
+        role: "",
+        description: "Technical Developer"
+      },
+      {
+        company: "Glasshouse Multimedia",
+        from: "Sep 2008",
+        to: "Sep 2011",
+        role: "",
+        description: "PHP Developer"
+      },
+      {
+        company: "Freelance",
+        from: "Apr 2006",
+        to: "Aug 2008",
+        role: "",
+        description: "Web Developer"
+      }
+    ]
+  }
+]

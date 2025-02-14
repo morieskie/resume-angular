@@ -1,0 +1,9 @@
+{
+  "name": "Derick Fynn",
+  "email": "dcfynn@icloud.com",
+  "dob": "14/10/1958",
+  "address": "! Archers Street, Summer Greens",
+  "mobileNumber": "+27 69 142 8725",
+  "imageSrc": "assets/images/avatar.png",
+  "bio": "<p>I have over 12 years professional experience as a Software Engineer, I specialise as a\n  JavaScript/TypeScript, PHP and NodeJS development using Laravel, Angular, VueJS, and React\n  frameworks/library with a great experience on MySQL, MsSQL, PostGres and MongoDB.</p>\n  <p>With DevOps experience using Docker, GitLab CI, Bitbucket Pipelines, Bamboo, XL Release and XL Deploy. Also\n  making deployments on Linux based environments, Heroku and AWS. I work in an Agile environment on a daily\n  basis using Jira for managing project progress and using gitflow workflow for managing project repositories\n  though I have greater knowledge of other workflows too.</p>\n  <p>I previously worked as a Tech Lead so I understand the importance of Technical specification documentation\n  and ensuring that there’s little to no mis-alignement when working with different teams collaboratively and\n  ensuring that communication is key for better visibility. I work well within a team setup and also work\n  great independently depending on the need for efficiency and quicker project turn around time.</p>\n  <p>I think my skills and experience is a great match for the candidate you are looking for and I will be able\n  to present more related technical experience.</p>"
+}
