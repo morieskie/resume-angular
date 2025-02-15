@@ -1,0 +1,28 @@
+<section class="ui fullscreen modal" [style.display]="display">
+  <div class="header">
+    <div class="ui grid">
+      <div class="two column row">
+        <div class="left floated column">
+          <div class="ui header backBtn" (click)="onBack()">
+            <i class="chevron left icon"></i>
+            <div class="content">Back</div>
+          </div>
+        </div>
+        <div class="right floated column">
+          <h2 class="ui header">
+            <i class="icon" [classList]="classes()"></i>
+            <span class="content">
+              {{ label() }}
+            </span>
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="ui container">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</section>
