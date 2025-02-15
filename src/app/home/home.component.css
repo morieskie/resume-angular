@@ -1,0 +1,114 @@
+main, main #name_skills_container {
+    position: relative;
+    width: 100%;
+    height: 100%
+  }
+  
+  main, main:before {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh
+  }
+  
+  main {
+    overflow: hidden;
+    /* // background-image: url(../../../assets/images/bg-resume-1.png); */
+    background-image: url(../../assets/images/mac-coffee-pencil.jpg);
+    /* // background-image: url(../../../assets/images/mac-speaker-table.jpg); */
+    background-size: cover;
+    background-position: top center
+  }
+  
+  main:before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .7)
+  }
+  
+  main #name_skills_container {
+    display: table;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all .5s;
+    text-align: center;
+    z-index: 2
+  }
+  
+  main #name_skills_container #name_skills {
+    display: table-cell;
+    vertical-align: middle
+  }
+  
+  main #name_skills_container #name_skills .name {
+    font-size: 4rem;
+    font-weight: 700;
+    min-height: 1rem;
+    line-height: 1.2857em
+  }
+  
+  @media (max-width: 320px) {
+    main #name_skills_container #name_skills .name {
+      font-size: 28px
+    }
+  }
+  
+  main #name_skills_container #name_skills .skill-set {
+    font-size: 1.071em;
+    font-weight: 700;
+    line-height: 1.2857em
+  }
+  
+  main #name_skills_container #name_skills .skill-set .animated_skills {
+    padding: .2em 0;
+    min-height: 3em !important;
+    overflow: hidden;
+  }
+  
+  @media (max-width: 320px) {
+    main #name_skills_container #name_skills .skill-set .animated_skills {
+      font-size: 20px
+    }
+  }
+  
+  main #name_skills_container #name_skills .skill-set .animated_skills span {
+    display: inline-block;
+    transition: all 2s
+  }
+  
+  main #name_skills_container #name_skills .skill-set .animated_skills #js-rotating {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+    vertical-align: top;
+    color: #00bcd4
+  }
+  
+  @media (max-width: 768px) {
+    main #name_skills_container #name_skills .skill-set .animated_skills #js-rotating {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  
+  main .ui.menu.fixed {
+    background: 0 0;
+    box-shadow: none;
+    border: 0
+  }
+  
+  @media (max-width: 240px) {
+    main .ui.menu.fixed .item {
+      min-width: 4.3em !important
+    }
+  }
+  
+  main .ui.menu.fixed .item:before {
+    width: 0
+  }
+  
