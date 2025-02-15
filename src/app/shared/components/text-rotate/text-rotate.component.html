@@ -1,0 +1,9 @@
+@if(activeRole()){
+<div
+  [@caption]="state()"
+  (@caption.start)="nextItem($event)"
+  (@caption.done)="nextItem($event)"
+>
+  {{ activeRole() }}
+</div>
+}
