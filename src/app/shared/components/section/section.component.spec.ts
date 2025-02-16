@@ -1,7 +1,6 @@
 import {
   ComponentFixture,
   fakeAsync,
-  flush,
   TestBed,
   tick,
 } from '@angular/core/testing';
@@ -9,7 +8,6 @@ import {
 import { SectionComponent } from './section.component';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { signal } from '@angular/core';
-import { By } from '@angular/platform-browser';
 import { mockRoutes } from '../../../mocks/mock-routes';
 import { provideRouter } from '@angular/router';
 
