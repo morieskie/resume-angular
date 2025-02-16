@@ -18,17 +18,28 @@ import { Router } from '@angular/router';
       state(
         'void',
         style({
-          transform: 'translateX(-100%) translateY(-100%)',
+          transform: 'translateZ(-1000px) rotateX(-90deg)',
+          scale: 0.98,
+          opacity: 0.9,
         })
       ),
       state(
         'enter',
         style({
-          transform: 'translateX(0%) translateY(0%)',
+          transform: 'translateZ(0px) rotateX(0deg)',
+          opacity: 1,
         })
       ),
-      transition('void => enter', [animate('0.3s ease-in')]),
-      transition('enter => void', [animate('0.5s 0.2s ease-in-out')]),
+      state(
+        'exit',
+        style({
+          transform: 'translateZ(-1000px) rotateX(90deg)',
+          opacity: 0.5,
+          scale: 0.95,
+        })
+      ),
+      transition('void => enter', [animate('0.5s 0.05s ease-in')]),
+      transition('enter => exit', [animate('0.5s 0.03s ease-in')]),
     ]),
   ],
 })
@@ -48,7 +59,7 @@ export class SectionComponent {
   }
 
   onBack() {
-    this.state.set('void');
+    this.state.set('exit');
     setTimeout(() => this.router.navigate(['/resume']), 1500);
   }
 }
