@@ -1,4 +1,4 @@
-import { Component, DestroyRef, inject } from '@angular/core';
+import { Component, computed, DestroyRef, inject } from '@angular/core';
 import { SectionComponent } from '../shared/components/section/section.component';
 import {
   animate,
@@ -9,15 +9,17 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import { NgOptimizedImage } from '@angular/common';
+import { DatePipe, NgOptimizedImage } from '@angular/common';
 import { ProfileService } from '../shared/service/profile.service';
 import { take } from 'rxjs';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ProfileInterface } from '../shared/interfaces/profile.interface';
+import { DateTime } from 'luxon';
+import { environment } from '../../environments/environment.development';
 
 @Component({
   selector: 'app-about',
-  imports: [SectionComponent, NgOptimizedImage],
+  imports: [SectionComponent, NgOptimizedImage, DatePipe],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
   animations: [
@@ -115,6 +117,27 @@ export class AboutComponent {
   fadeInLeft = 'off';
   fadeInUp = 'off';
   model: ProfileInterface | undefined;
+  fullName = computed(() => {
+    return `${this.model?.name.firstName} ${this.model?.name.lastName}`;
+  });
+  dob = computed(() => {
+    if (this.model?.dob) {
+      return DateTime.fromFormat(this.model.dob, environment.dateFormat, {
+        zone: environment.timezone,
+      }).toJSDate();
+    }
+    return '';
+  });
+  coontactNumber = computed(() => {
+    if (this.model?.mobileNumber) {
+      const { mobileNumber } = this.model;
+      return (
+        mobileNumber.substring(0, 7).padEnd(10, 'X') +
+        mobileNumber.substring(11).padStart(6, ' ')
+      );
+    }
+    return '';
+  });
 
   destroyRef: DestroyRef = inject(DestroyRef);
 
@@ -127,10 +150,6 @@ export class AboutComponent {
     this.service
       .getDetails()
       .pipe(take(1), takeUntilDestroyed(this.destroyRef))
-      .subscribe((profile) => {
-        setTimeout(() => {
-          this.model = profile;
-        });
-      });
+      .subscribe((profile) => setTimeout(() => (this.model = profile)));
   }
 }

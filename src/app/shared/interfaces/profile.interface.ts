@@ -1,10 +1,22 @@
+import { ExperienceInterface } from "./experience.interface";
+
 export interface ProfileInterface {
-  name: string;
+  name: {
+    firstName: string;
+    lastName: string;
+  };
   email: string;
   dob: string;
   address: string;
   mobileNumber: string;
-  bio: string;
-
   imageSrc: string;
+  bio: string;
+  socialLinks: {
+    firm: string;
+    icon: {
+      className: string;
+    };
+    url: string;
+  }[];
+  expertience: ExperienceInterface[]
 }

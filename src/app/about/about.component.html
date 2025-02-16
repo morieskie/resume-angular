@@ -20,12 +20,12 @@
               data-animation-effect="fadeInRight"
               data-anim-delay="100"
             >
-              {{ model.name }}
+              {{ fullName() }}
             </h2>
             <div class="meta">
-              <div data-animation-effect="fadeInRight" data-anim-delay="200">
+              <!-- <div data-animation-effect="fadeInRight" data-anim-delay="200">
                 Web Developer
-              </div>
+              </div> -->
               <h4
                 class="ui dividing header"
                 data-animation-effect="fadeInRight"
@@ -34,7 +34,7 @@
                 <i class="birthday icon"></i>
                 <span class="content">
                   Date Of Birth
-                  <span class="sub header">{{ model.dob }}</span>
+                  <span class="sub header">{{ dob() | date: 'dd MMMM' }}</span>
                 </span>
               </h4>
               <h4
@@ -56,7 +56,7 @@
                 <i class="call icon"></i>
                 <span class="content">
                   Phone No.
-                  <span class="sub header">{{ model.mobileNumber }}</span>
+                  <span class="sub header">{{ coontactNumber() }}</span>
                 </span>
               </h4>
               <h4
