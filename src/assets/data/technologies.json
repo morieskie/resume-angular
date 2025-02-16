@@ -1,38 +1,38 @@
 [
   {
     "tech": "Laravel",
-    "experience": 9,
+    "experience": 10,
     "competency": 4.5,
     "color": "red"
   },
   {
+    "tech": "PHP",
+    "experience": 14,
+    "competency": 4.6,
+    "color": "pink"
+  },
+  {
     "tech": "Node",
     "experience": 8,
-    "competency": 4,
+    "competency": 4.5,
     "color": "yellow"
   },
   {
-    "tech": "Symfony",
-    "experience": 2,
-    "competency": 3,
+    "tech": "TypeScript",
+    "experience": 8,
+    "competency": 3.9,
     "color": "green"
   },
   {
-    "tech": "Yii2",
+    "tech": "Angular",
     "experience": 10,
-    "competency": 4,
+    "competency": 4.7,
     "color": "black"
   },
   {
-    "tech": "GIT",
-    "experience": 10,
-    "competency": 4,
+    "tech": "React",
+    "experience": 8,
+    "competency": 4.2,
     "color": "orange"
-  },
-  {
-    "tech": "SELENIUM",
-    "experience": 3,
-    "competency": 3,
-    "color": "pink"
   }
 ]
