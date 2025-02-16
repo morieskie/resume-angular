@@ -3,17 +3,13 @@ import { MockHomeComponent } from './mock-home.component';
 
 export const mockRoutes = [
   {
-    path: 'home',
+    path: '',
     component: MockHomeComponent,
     children: [
       {
-        path: "about",
-        component: MockAboutComponent
-      }
-    ]
-  },
-  {
-    path: '',
-    component: MockHomeComponent,
+        path: 'about',
+        component: MockAboutComponent,
+      },
+    ],
   },
 ];
