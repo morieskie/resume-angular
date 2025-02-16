@@ -66,7 +66,7 @@ export class TextRotateComponent {
   ngOnInit() {
     this.activeRole.set(this.roles()?.[0]);
     this.state.set('enter');
-    console.log('INIT')
+
     if (isPlatformBrowser(this.platformId)) {
       interval(3500)
         .pipe(

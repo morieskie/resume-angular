@@ -60,6 +60,6 @@ export class SectionComponent {
 
   onBack() {
     this.state.set('exit');
-    setTimeout(() => this.router.navigate(['/resume']), 1500);
+    setTimeout(() => this.router.navigate(['/']), 700);
   }
 }

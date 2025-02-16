@@ -1,9 +1,9 @@
 <section class="ui fullscreen modal" [@section]="state()" [style.display]="display">
-  <div class="header">
+  <div class="header" style="position: sticky;">
     <div class="ui grid">
       <div class="two column row">
         <div class="left floated column">
-          <div class="ui header backBtn" (click)="onBack()">
+          <div class="ui header backBtn" data-testid="backBtn" (click)="onBack()">
             <i class="chevron left icon"></i>
             <div class="content">Back</div>
           </div>
