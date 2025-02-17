@@ -143,7 +143,7 @@ export class AboutComponent {
     if (this.model?.imageSrc) {
       const { baseApiUrl, baseHref }: any = environment;
       return baseHref.length
-        ? `${baseHref}/$this.model.imageSrc}`
+        ? `${baseHref}/${this.model.imageSrc}`
         : this.model.imageSrc;
     }
     return '';
