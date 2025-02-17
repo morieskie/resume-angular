@@ -128,7 +128,7 @@ export class AboutComponent {
     }
     return '';
   });
-  coontactNumber = computed(() => {
+  contactNumber = computed(() => {
     if (this.model?.mobileNumber) {
       const { mobileNumber } = this.model;
       return (
@@ -137,6 +137,14 @@ export class AboutComponent {
       );
     }
     return '';
+  });
+
+  imageSource = computed(() => {
+    const {
+      baseApiUrl,
+      endpoints: { profile },
+    }: any = environment;
+    return `${baseApiUrl}/${this.model?.imageSrc}`;
   });
 
   destroyRef: DestroyRef = inject(DestroyRef);
