@@ -128,13 +128,22 @@ export class AboutComponent {
     }
     return '';
   });
-  coontactNumber = computed(() => {
+  contactNumber = computed(() => {
     if (this.model?.mobileNumber) {
       const { mobileNumber } = this.model;
       return (
         mobileNumber.substring(0, 7).padEnd(10, 'X') +
         mobileNumber.substring(11).padStart(5, ' ')
       );
+    }
+    return '';
+  });
+
+  imageSource = computed(() => {
+    if (this.model?.imageSrc) {
+      const { baseApiUrl }: any = environment;
+      console.log('baseApiUrl',baseApiUrl)
+      return this.model.imageSrc;
     }
     return '';
   });

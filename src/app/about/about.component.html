@@ -6,12 +6,13 @@
           @if(model){
           <img
             [@fadeInLeft]="fadeInLeft"
-            ngSrc="{{ model.imageSrc }}"
+            ngSrc="{{ imageSource() }}"
             alt=""
-            class="ui medium image"
+            priority
+            class="ui image"
             data-animation-effect="fadeInLeft"
-            [width]="300"
-            [height]="398"
+            [width]="274"
+            [height]="274"
           />
 
           <div class="content" [@fadeInRight]="fadeInRight">
@@ -56,7 +57,7 @@
                 <i class="call icon"></i>
                 <span class="content">
                   Phone No.
-                  <span class="sub header">{{ coontactNumber() }}</span>
+                  <span class="sub header">{{ contactNumber() }}</span>
                 </span>
               </h4>
               <h4

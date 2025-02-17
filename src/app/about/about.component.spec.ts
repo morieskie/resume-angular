@@ -54,16 +54,21 @@ describe('AboutComponent', () => {
     tick();
     expect(component.fullName()).toEqual('Test QA');
     expect(component.dob()).toEqual('');
-    expect(component.coontactNumber()).toEqual('');
+    expect(component.contactNumber()).toEqual('');
   }));
 
   it('should compose and musk contact number', fakeAsync(() => {
     component.model = { mobileNumber: '+27 72 567 3456' } as ProfileInterface;
-    expect(component.coontactNumber()).toEqual('+27 72 XXX 3456');
+    expect(component.contactNumber()).toEqual('+27 72 XXX 3456');
   }));
 
   it('should parse date string given the format and tz', fakeAsync(() => {
     component.model = { dob: '31/10/1985' } as ProfileInterface;
     expect(component.dob()).toBeInstanceOf(Date);
+  }));
+
+  it('should parse date string given the format and tz', fakeAsync(() => {
+    component.model = { imageSrc: 'assets/img/test.png' } as ProfileInterface;
+    expect(component.imageSource()).toContain('assets/img/test.png');
   }));
 });
