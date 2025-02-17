@@ -19,7 +19,9 @@ describe('ProfileService', () => {
           provide: HttpHandler,
           useValue: {
             handle: () => {
-              return of({ name: 'Test' } as ProfileInterface);
+              return of({
+                name: { firstName: 'Test', lastName: 'QA' },
+              } as ProfileInterface);
             },
           },
         },

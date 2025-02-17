@@ -133,7 +133,7 @@ export class AboutComponent {
       const { mobileNumber } = this.model;
       return (
         mobileNumber.substring(0, 7).padEnd(10, 'X') +
-        mobileNumber.substring(11).padStart(6, ' ')
+        mobileNumber.substring(11).padStart(5, ' ')
       );
     }
     return '';

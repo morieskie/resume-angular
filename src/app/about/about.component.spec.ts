@@ -23,7 +23,10 @@ describe('AboutComponent', () => {
         {
           provide: ProfileService,
           useValue: {
-            getDetails: () => of({ name: 'Test' } as ProfileInterface),
+            getDetails: () =>
+              of({
+                name: { firstName: 'Test', lastName: 'QA' },
+              } as ProfileInterface),
           },
         },
       ],
@@ -49,6 +52,18 @@ describe('AboutComponent', () => {
     tick();
     component.ngOnInit();
     tick();
-    expect((component.model as any).name).toEqual('Test');
+    expect(component.fullName()).toEqual('Test QA');
+    expect(component.dob()).toEqual('');
+    expect(component.coontactNumber()).toEqual('');
+  }));
+
+  it('should compose and musk contact number', fakeAsync(() => {
+    component.model = { mobileNumber: '+27 72 567 3456' } as ProfileInterface;
+    expect(component.coontactNumber()).toEqual('+27 72 XXX 3456');
+  }));
+
+  it('should parse date string given the format and tz', fakeAsync(() => {
+    component.model = { dob: '31/10/1985' } as ProfileInterface;
+    expect(component.dob()).toBeInstanceOf(Date);
   }));
 });
