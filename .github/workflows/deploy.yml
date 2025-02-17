@@ -1,0 +1,54 @@
+name: Angular Resume Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: resume-angular
+      url: "https://morieskie.github.io/resume-angular"
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm i
+
+      - name: Build the Angular App
+        run: |
+          npm run deploybuild
+          if [ ! -d "./dist/resume-angular19/browser" ]; then
+            echo "Error: Build directory not found!"
+            exit 1
+          fi
+
+      - name: Debug Directory Contents
+        run: |
+          echo "Root directory contents:"
+          ls -l
+          echo "Build directory contents:"
+          ls -l ./dist/resume-angular19/browser
+          
+
+      - name: Upload Build Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist/resume-angular19/browser
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
