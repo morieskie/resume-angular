@@ -1,5 +1,5 @@
 export const environment = {
-  baseApiUrl: 'http://localhost:4200',
+  baseApiUrl: 'http://localhost:3000/browser',
   endpoints: {
     profile: 'assets/data/profile.json',
   },
