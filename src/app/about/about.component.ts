@@ -141,9 +141,10 @@ export class AboutComponent {
 
   imageSource = computed(() => {
     if (this.model?.imageSrc) {
-      const { baseApiUrl }: any = environment;
-      console.log('baseApiUrl',baseApiUrl)
-      return this.model.imageSrc;
+      const { baseApiUrl, baseHref }: any = environment;
+      return baseHref.length
+        ? `${baseHref}/$this.model.imageSrc}`
+        : this.model.imageSrc;
     }
     return '';
   });
