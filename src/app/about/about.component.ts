@@ -15,7 +15,7 @@ import { take } from 'rxjs';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ProfileInterface } from '../shared/interfaces/profile.interface';
 import { DateTime } from 'luxon';
-import { environment } from '../../environments/environment.development';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-about',
