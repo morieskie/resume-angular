@@ -10,13 +10,11 @@ import { TextRotateComponent } from './text-rotate.component';
 import { signal } from '@angular/core';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { TestScheduler } from 'rxjs/testing';
-import { Subject, takeUntil, tap } from 'rxjs';
 
 describe('TextRotateComponent', () => {
   let component: TextRotateComponent;
   let fixture: ComponentFixture<TextRotateComponent>;
   let testScheduler: TestScheduler;
-  let destroy$: Subject<void>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -26,7 +24,6 @@ describe('TextRotateComponent', () => {
 
     fixture = TestBed.createComponent(TextRotateComponent);
     component = fixture.componentInstance;
-    destroy$ = new Subject<void>();
     component.roles = signal([
       'Tester',
       'QA',
@@ -54,13 +51,11 @@ describe('TextRotateComponent', () => {
       'Unit Tester',
     ]) as any;
     component.ngOnInit();
-    // tick();
     tick();
     expect(component.activeRole()).toEqual('Tester');
-    console.log('Role', component.activeRole());
     tick(3500);
     expect(component.activeRole()).toEqual('QA');
-    console.log('Role', component.activeRole());
+
     tick(10000);
     expect(component.activeRole()).toEqual('Unit Tester');
     flush();

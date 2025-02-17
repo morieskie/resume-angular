@@ -15,5 +15,4 @@ export class MenuLinkComponent {
   classes = computed(()=> {
     return `icon ${this.icon()}`
   })
-  
 }

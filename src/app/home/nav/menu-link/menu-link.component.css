@@ -1,0 +1,11 @@
+.ui.inverted.menu :host.item a {
+    width: 100% !important;
+    height: 100% !important;
+}
+.ui.inverted.menu :host.item:hover {
+    background: rgba(255, 255, 255, .08);
+    color: #fff;
+}
+:host a.item:hover {
+    background: transparent!important;
+}

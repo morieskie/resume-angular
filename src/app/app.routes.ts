@@ -1,17 +1,16 @@
 import { Routes } from '@angular/router';
-// import { HomeComponent } from './home/home.component';
-import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = [
   {
-    path: 'resume',
-    loadComponent: () =>
-      import('./home/home.component').then((c) => c.HomeComponent),
+    path: '',
+    component: HomeComponent,
     children: [
-      // {
-      //   path: 'about',
-      //   // component: AboutComponent
-      // },
+      {
+        path: 'about',
+        loadComponent: () =>
+          import('./about/about.component').then((c) => c.AboutComponent),
+      },
       // {
       //   path: 'resume',
       //   component: ResumeComponent
@@ -25,9 +24,5 @@ export const routes: Routes = [
       //   component: ContactComponent
       // },
     ],
-  },
-  {
-    path: '',
-    component: AppComponent,
   },
 ];

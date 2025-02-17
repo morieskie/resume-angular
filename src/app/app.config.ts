@@ -7,8 +7,8 @@ import {
   withEventReplay,
 } from '@angular/platform-browser';
 import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
-import { provideAnimations, provideNoopAnimations } from '@angular/platform-browser/animations';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { provideAnimations } from '@angular/platform-browser/animations';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -17,5 +17,6 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(withEventReplay()),
     provideCharts(withDefaultRegisterables()),
     provideAnimations(),
+    provideHttpClient(withFetch())
   ],
 };

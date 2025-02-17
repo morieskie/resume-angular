@@ -1,0 +1,105 @@
+<app-section label="About" icon="user">
+  <div class="ui grid">
+    <div class="sixteen wide column">
+      <div class="ui items">
+        <div class="item">
+          @if(model){
+          <img
+            [@fadeInLeft]="fadeInLeft"
+            ngSrc="{{ model.imageSrc }}"
+            alt=""
+            class="ui medium image"
+            data-animation-effect="fadeInLeft"
+            [width]="300"
+            [height]="398"
+          />
+
+          <div class="content" [@fadeInRight]="fadeInRight">
+            <h2
+              class="ui header"
+              data-animation-effect="fadeInRight"
+              data-anim-delay="100"
+            >
+              {{ fullName() }}
+            </h2>
+            <div class="meta">
+              <!-- <div data-animation-effect="fadeInRight" data-anim-delay="200">
+                Web Developer
+              </div> -->
+              <h4
+                class="ui dividing header"
+                data-animation-effect="fadeInRight"
+                data-anim-delay="300"
+              >
+                <i class="birthday icon"></i>
+                <span class="content">
+                  Date Of Birth
+                  <span class="sub header">{{ dob() | date: 'dd MMMM' }}</span>
+                </span>
+              </h4>
+              <h4
+                class="ui dividing header"
+                data-animation-effect="fadeInRight"
+                data-anim-delay="400"
+              >
+                <i class="home icon"></i>
+                <span class="content">
+                  Address
+                  <span class="sub header">{{ model.address }}</span>
+                </span>
+              </h4>
+              <h4
+                class="ui dividing header"
+                data-animation-effect="fadeInRight"
+                data-anim-delay="500"
+              >
+                <i class="call icon"></i>
+                <span class="content">
+                  Phone No.
+                  <span class="sub header">{{ coontactNumber() }}</span>
+                </span>
+              </h4>
+              <h4
+                class="ui dividing header"
+                data-animation-effect="fadeInRight"
+                data-anim-delay="600"
+              >
+                <i class="send icon"></i>
+                <span class="content">
+                  Email
+                  <span class="sub header">
+                    <a href="mailto:{{ model.email }}">
+                      {{ model.email }}
+                    </a>
+                  </span>
+                </span>
+              </h4>
+              <h4
+                class="ui dividing header"
+                data-animation-effect="fadeInRight"
+                data-anim-delay="700"
+              >
+                <i class="linkify icon"></i>
+                <span class="content">
+                  Website
+                  <span class="sub header">
+                    <a href="http://morieskie.github.io/resume">Github Pages</a>
+                  </span>
+                </span>
+              </h4>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+    @if (model?.bio) {
+    <div
+      class="sixteen wide column"
+      [@fadeInUp]="fadeInUp"
+      [innerHTML]="model?.bio"
+      data-anim-delay="800"
+    ></div>
+    }
+  </div>
+</app-section>
