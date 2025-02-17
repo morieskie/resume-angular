@@ -140,11 +140,12 @@ export class AboutComponent {
   });
 
   imageSource = computed(() => {
-    const {
-      baseApiUrl,
-      endpoints: { profile },
-    }: any = environment;
-    return `${baseApiUrl}/${this.model?.imageSrc}`;
+    if (this.model?.imageSrc) {
+      const { baseApiUrl }: any = environment;
+      console.log('baseApiUrl',baseApiUrl)
+      return this.model.imageSrc;
+    }
+    return '';
   });
 
   destroyRef: DestroyRef = inject(DestroyRef);
