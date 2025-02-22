@@ -1,0 +1,31 @@
+<app-section icon="tasks" label="Resume">
+  <div class="ui grid">
+    <div class="sixteen wide column">
+      <div class="ui labeled icon four item stackable menu" [@tabs]="state">
+        <app-menu-link
+          icon="university"
+          label="Education"
+          path="education"
+        ></app-menu-link>
+        <app-menu-link
+          icon="line chart"
+          label="Experience"
+          path="experience"
+        ></app-menu-link>
+        <app-menu-link
+          icon="bar chart"
+          label="Skills"
+          path="skills"
+        ></app-menu-link>
+        <app-menu-link
+          icon="smile"
+          label="Testimonials"
+          path="testimonials"
+        ></app-menu-link>
+      </div>
+      <div class="resume-section">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</app-section>

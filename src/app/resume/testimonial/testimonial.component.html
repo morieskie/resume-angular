@@ -1,0 +1,9 @@
+@for(testimony of data$(); track $index; let i = $index){
+<div class="ui one column stackable grid">
+  <app-quote class="column" [float]="(i + 1) % 2 === 0 ? 'right' : 'left'">
+    <ng-container name>{{ testimony.name }}</ng-container>
+    <ng-container position>{{ testimony.position }}</ng-container>
+    {{ testimony.testimony }}
+  </app-quote>
+</div>
+}

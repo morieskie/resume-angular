@@ -1,0 +1,40 @@
+<div class="ui grid" [@skills]>
+  <div class="ui text container">
+    <div class="ui two column stackable grid padded">
+      <div class="sixteen wide column fadeInUp">
+        <h4 class="ui center aligned header">FRONT-END SKILLS</h4>
+        @if(frontendSkills.length){
+        <app-bar-chart [data]="frontendSkills"></app-bar-chart>
+        }
+      </div>
+      <div class="column fadeInLeft">
+        <h4 class="ui center aligned header">BACK-END SKILLS</h4>
+        @if(backendSkills.length){
+        <app-doughnut-chart [data]="backendSkills"></app-doughnut-chart>
+        }
+      </div>
+      <div class="column fadeInRight">
+        <h4 class="ui center aligned header">DEVOPS</h4>
+        <app-pie-chart [data]="devopsSkills"></app-pie-chart>
+      </div>
+      <div class="sixteen wide column">
+        <h4 class="ui center aligned header">OTHER SKILLS</h4>
+        @for(item of technologies; track $index) {
+        <app-progress-bar
+          [percentage]="(item.competency / 5) * 100"
+          [className]="item.color"
+        >
+          {{ item.tech }}
+        </app-progress-bar>
+        }
+      </div>
+      <div class="sixteen wide center aligned column">
+        <h4 class="ui center aligned header">STYLING</h4>
+        <app-star-rating [rating]="4.5" [maxRating]="5">CSS</app-star-rating>
+          <app-star-rating [rating]="4">SCSS</app-star-rating>
+          <app-star-rating [rating]="3.5">SASS</app-star-rating>
+          <app-star-rating [rating]="3.5">LESS</app-star-rating>
+      </div>
+    </div>
+  </div>
+</div>
