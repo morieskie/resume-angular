@@ -9,6 +9,8 @@ import {
 import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { provideStore } from '@ngrx/store';
+import { resumeReducer } from '../store/state/resume.reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -17,6 +19,7 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(withEventReplay()),
     provideCharts(withDefaultRegisterables()),
     provideAnimations(),
-    provideHttpClient(withFetch())
+    provideHttpClient(withFetch()),
+    provideStore({ resume: resumeReducer }),
   ],
 };

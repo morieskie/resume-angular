@@ -11,10 +11,46 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./about/about.component').then((c) => c.AboutComponent),
       },
-      // {
-      //   path: 'resume',
-      //   component: ResumeComponent
-      // },
+      {
+        path: 'resume',
+        loadComponent: () =>
+          import('./resume/resume.component').then((c) => c.ResumeComponent),
+        children: [
+          // {
+          //   path: '',
+          //   pathMatch: 'full',
+          //   redirectTo: 'education',
+          // },
+          {
+            path: 'education',
+            loadComponent: () =>
+              import('./resume/education/education.component').then(
+                (c) => c.EducationComponent
+              ),
+          },
+          {
+            path: 'experience',
+            loadComponent: () =>
+              import('./resume/experience/experience.component').then(
+                (c) => c.ExperienceComponent
+              ),
+          },
+          {
+            path: 'skills',
+            loadComponent: () =>
+              import('./resume/skill/skill.component').then(
+                (c) => c.SkillComponent
+              ),
+          },
+          {
+            path: 'testimonials',
+            loadComponent: () =>
+              import('./resume/testimonial/testimonial.component').then(
+                (c) => c.TestimonialComponent
+              ),
+          },
+        ],
+      },
       // {
       //   path: 'portfolio',
       //   component: PortfolioComponent

@@ -1,0 +1,10 @@
+@if(percentage()) {
+<div class="ui progress" [class]="className()" [@progress]="state">
+  <div class="bar" [style.width]="percentage() + '%'">
+    <div class="label">
+      <ng-content></ng-content>
+    </div>
+    <div class="progress">{{ wholePercentage() }}%</div>
+  </div>
+</div>
+}

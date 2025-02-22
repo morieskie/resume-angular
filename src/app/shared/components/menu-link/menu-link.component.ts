@@ -12,7 +12,7 @@ export class MenuLinkComponent {
   label = input.required<string>();
   path = input.required<string>();
 
-  classes = computed(()=> {
-    return `icon ${this.icon()}`
-  })
+  classes = computed(() => {
+    return `icon ${this.icon()}`;
+  });
 }
