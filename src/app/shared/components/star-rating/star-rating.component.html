@@ -1,0 +1,12 @@
+<div class="rating">
+  <div class="content">
+    <div class="header">
+      <ng-content></ng-content>
+      <div class="ui small star rating">
+        @for(star of stars; track $index){
+        <i class="icon active" [class.active]="star === 1"> </i>
+        }
+      </div>
+    </div>
+  </div>
+</div>
