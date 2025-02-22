@@ -3,5 +3,5 @@ export interface ExperienceInterface {
   from: string;
   to: string;
   role: string;
-  description?:string
+  description:string
 }
