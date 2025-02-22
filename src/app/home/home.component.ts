@@ -48,7 +48,6 @@ export class HomeComponent {
     })
       .pipe(take(1))
       .subscribe(({ education, experience, testimony, technology }) => {
-        console.log('data', { education, experience });
         this.store.dispatch(educationRetrieved({ education }));
         this.store.dispatch(experienceRetrieved({ experience }));
         this.store.dispatch(testimonyRetrieved({ testimony }));

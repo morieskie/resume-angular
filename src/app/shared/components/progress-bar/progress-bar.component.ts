@@ -6,12 +6,11 @@ import {
   animate,
   query,
 } from '@angular/animations';
-import { PercentPipe } from '@angular/common';
 import { Component, computed, input } from '@angular/core';
 
 @Component({
   selector: 'app-progress-bar',
-  imports: [PercentPipe],
+  imports: [],
   templateUrl: './progress-bar.component.html',
   styleUrl: './progress-bar.component.css',
   animations: [
