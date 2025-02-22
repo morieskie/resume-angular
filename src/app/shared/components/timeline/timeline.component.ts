@@ -1,12 +1,11 @@
 import { DatePipe } from '@angular/common';
-import { Component, computed, input, signal } from '@angular/core';
-import { ITimelineItem } from '../../interfaces/ITimelineItem';
+import { Component, computed, input } from '@angular/core';
+import { TimelineItemInterface } from '../../interfaces/timeline-item.interface';
 import {
   animate,
   group,
   query,
   stagger,
-  state,
   style,
   transition,
   trigger,
@@ -104,8 +103,8 @@ import {
 })
 export class TimelineComponent {
   state = 'void';
-  data = input.required<ITimelineItem[]>();
-  items = computed<ITimelineItem[]>(() => {
+  data = input.required<TimelineItemInterface[]>();
+  items = computed<TimelineItemInterface[]>(() => {
     return this.data();
   });
 }

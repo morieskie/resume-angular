@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { ExperienceInterface } from '../../shared/interfaces/experience.interface';
 import { selectExperience } from '../../../store/state/resume.selectors';
 import { TimelineComponent } from '../../shared/components/timeline/timeline.component';
-import { ITimelineItem } from '../../shared/interfaces/ITimelineItem';
+import { TimelineItemInterface } from '../../shared/interfaces/timeline-item.interface';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
@@ -13,7 +13,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
   styleUrl: './experience.component.css',
 })
 export class ExperienceComponent {
-  data$ = signal<ITimelineItem[]>([]);
+  data$ = signal<TimelineItemInterface[]>([]);
   destroyRef: DestroyRef = inject(DestroyRef);
   constructor(private store: Store) {}
 
