@@ -1,5 +1,5 @@
 import { Component, output } from '@angular/core';
-import { MenuLinkComponent } from './menu-link/menu-link.component';
+import { MenuLinkComponent } from '../../shared/components/menu-link/menu-link.component';
 
 @Component({
   selector: 'app-nav',

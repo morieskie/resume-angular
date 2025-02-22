@@ -6,11 +6,11 @@
   <div id="name_skills_container">
     <div id="name_skills">
       <div class="name">{{ data().name }}</div>
-      @if (roles) {
+      @if (roles()) {
       <div class="skill-set">
         <section class="intro">
           <h1 class="animated_skills">
-            <app-text-rotate [roles]="data().roles" />
+            <app-text-rotate [roles]="roles()" />
           </h1>
         </section>
       </div>
