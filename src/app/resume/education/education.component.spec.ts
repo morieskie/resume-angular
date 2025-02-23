@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EducationComponent } from './education.component';
+import { provideMockStore } from '@ngrx/store/testing';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 describe('EducationComponent', () => {
   let component: EducationComponent;
@@ -8,7 +10,8 @@ describe('EducationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EducationComponent]
+      imports: [EducationComponent],
+      providers: [provideMockStore(), provideAnimations()]
     })
     .compileComponents();
 

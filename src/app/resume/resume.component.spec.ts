@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ResumeComponent } from './resume.component';
+import { provideRouter } from '@angular/router';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 describe('ResumeComponent', () => {
   let component: ResumeComponent;
@@ -8,7 +10,8 @@ describe('ResumeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ResumeComponent]
+      imports: [ResumeComponent],
+      providers:[provideRouter([]), provideAnimations()]
     })
     .compileComponents();
 
