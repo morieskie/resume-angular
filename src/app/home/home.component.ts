@@ -7,6 +7,7 @@ import { forkJoin, take } from 'rxjs';
 import {
   educationRetrieved,
   experienceRetrieved,
+  projectRetrieved,
   technologyRetrieved,
   testimonyRetrieved,
 } from '../../store/state/resume.actions';
@@ -15,6 +16,7 @@ import { EducationService } from '../shared/service/education.service';
 import { ExperienceService } from '../shared/service/experience.service';
 import { TestimonialService } from '../shared/service/testimonial.service';
 import { TechnologyService } from '../shared/service/technology.service';
+import { ProjectService } from '../shared/service/project.service';
 
 @Component({
   selector: 'app-home',
@@ -36,6 +38,7 @@ export class HomeComponent {
     private experienceService: ExperienceService,
     private testimonyService: TestimonialService,
     private technologyService: TechnologyService,
+    private projectService: ProjectService,
     private store: Store
   ) {}
 
@@ -45,14 +48,18 @@ export class HomeComponent {
       experience: this.experienceService.getData(),
       testimony: this.testimonyService.getData(),
       technology: this.technologyService.getData(),
+      project: this.projectService.getData(),
     })
       .pipe(take(1))
-      .subscribe(({ education, experience, testimony, technology }) => {
-        this.store.dispatch(educationRetrieved({ education }));
-        this.store.dispatch(experienceRetrieved({ experience }));
-        this.store.dispatch(testimonyRetrieved({ testimony }));
-        this.store.dispatch(technologyRetrieved({ technology }));
-        this.positions = [...new Set(experience.map((e) => e.role))];
-      });
+      .subscribe(
+        ({ education, experience, testimony, technology, project }) => {
+          this.store.dispatch(educationRetrieved({ education }));
+          this.store.dispatch(experienceRetrieved({ experience }));
+          this.store.dispatch(testimonyRetrieved({ testimony }));
+          this.store.dispatch(technologyRetrieved({ technology }));
+          this.store.dispatch(projectRetrieved({ project }));
+          this.positions = [...new Set(experience.map((e) => e.role))];
+        }
+      );
   }
 }
