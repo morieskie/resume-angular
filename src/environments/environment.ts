@@ -7,6 +7,7 @@ export const environment = {
     experience: 'assets/data/experience.json',
     testimonial: 'assets/data/testimonials.json',
     technology: `assets/data/technologies.json`,
+    project: `assets/data/project.json`,
   },
   timezone: 'Africa/Johannesburg',
   dateFormat: 'dd/MM/yyyy',
