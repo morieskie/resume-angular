@@ -3,6 +3,7 @@ import { EducationInterface } from '../../app/shared/interfaces/education.interf
 import { ExperienceInterface } from '../../app/shared/interfaces/experience.interface';
 import { TestimonyInterface } from '../../app/shared/interfaces/testimony.interface';
 import { TechnologyInterface } from '../../app/shared/interfaces/technology.interface';
+import { ProjectInterface } from '../../app/shared/interfaces/project.interface';
 
 export const resumeApiActions = createActionGroup({
   source: 'Resume API',
@@ -19,6 +20,9 @@ export const resumeApiActions = createActionGroup({
     'technology Retrieved': props<{
       technology: ReadonlyArray<TechnologyInterface>;
     }>(),
+    'project Retrieved': props<{
+      project: ReadonlyArray<ProjectInterface>;
+    }>(),
   },
 });
 export const {
@@ -26,4 +30,5 @@ export const {
   experienceRetrieved,
   testimonyRetrieved,
   technologyRetrieved,
+  projectRetrieved,
 } = resumeApiActions;
