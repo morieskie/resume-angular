@@ -27,5 +27,6 @@
 
 .ui[class*="ribbon right"].label:after {
     left: auto;
-    right: 0;
+    right: 15px;
+    transform: translateX(100%) rotate(270deg);
 }
