@@ -1,0 +1,9 @@
+<a
+  [class]="classes()"
+  [routerLink]="path()"
+  (click)="onNavigate()"
+  (mouseenter)="onMouseEnter($event)"
+  (mouseleave)="onMouseLeave($event)"
+>
+  <ng-content></ng-content>
+</a>
