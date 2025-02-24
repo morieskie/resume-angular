@@ -62,7 +62,6 @@ describe('ProjectComponent', () => {
   it('should set project, currentIndx & images signals on init', fakeAsync(() => {
     component.ngOnInit();
     tick();
-    console.log('Projects', component.projects);
     expect(component.projects.length).toEqual(2);
   }));
 
