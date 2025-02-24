@@ -1,18 +1,118 @@
-<div class="mfp-bg mfp-ready"></div>
-<div class="mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-ready" tabindex="-1" style="overflow: hidden auto;" >
-  <div class="mfp-container mfp-s-ready mfp-inline-holder">
-    <div class="mfp-content">
-      <div id="popup-2" class="white-popup mfp-hide1">
-        <ng-content></ng-content>
-        <button title="Close (Esc)" type="button" class="mfp-close" >×</button>
+@if(project){
+<div
+  class="ui fullscreen modal"
+  style="
+    display: block;
+    visibility: visible;
+    background-color: black;
+    z-index: 1001;
+  "
+>
+  <div id="page-ajax-loaded" class="page-portfolio-loaded animated">
+    <div class="ajax-page-wrapper">
+      <div class="ajax-page-nav">
+        <div class="nav-item ajax-page-prev-next">
+          <a class="ajax-page-load" (click)="onPrev()">
+            <i class="zmdi icon chevron left"></i>
+          </a>
+          <a class="ajax-page-load" (click)="onNext()">
+            <i class="zmdi icon chevron right"></i>
+          </a>
+        </div>
+        <div class="nav-item ajax-page-close-button">
+          <a id="ajax-page-close-button" [routerLink]="['../']">
+            <i class="zmdi icon close"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="ajax-page-title">
+        <h1>{{ project.project }}</h1>
+      </div>
+
+      <div class="ui grid">
+        <div class="row">
+          <div class="ten wide column portfolio-block">
+            <div class="owl-carousel portfolio-page-carousel">
+              <div class="owl-stage-outer">
+                <div class="item">
+                  <c-carousel [dark]="true" [wrap]="true">
+                    <c-carousel-indicators></c-carousel-indicators>
+                    <c-carousel-inner>
+                      @for(img of project.images; track $index; ) {
+                      <c-carousel-item>
+                        <img
+                          [src]="img"
+                          [alt]="project.altTitle"
+                          class="d-block w-100"
+                          loading="lazy"
+                          style="min-height: 600px"
+                        />
+                      </c-carousel-item>
+                      }
+                    </c-carousel-inner>
+                    <c-carousel-control
+                      [routerLink]
+                      caption="Previous"
+                      direction="prev"
+                    ></c-carousel-control>
+                    <c-carousel-control
+                      [routerLink]
+                      caption="Next"
+                      direction="next"
+                    ></c-carousel-control>
+                  </c-carousel>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="six wide column portfolio-block">
+            <div class="block-title">
+              <h3>Description</h3>
+            </div>
+            <ul class="project-general-info">
+              @if(project.url){
+              <li>
+                <p>
+                  <i class="fa fa-globe"></i>
+                  <a [href]="project.url" target="_blank" rel="noreferrer">
+                    {{ project.url }}
+                  </a>
+                </p>
+              </li>
+              } @if(project.date) {
+              <li>
+                <p>
+                  <i class="fa fa-calendar"></i>
+                  {{ project.date | date : "full" }}
+                </p>
+              </li>
+              }
+            </ul>
+
+            @if(project.description){
+            <p class="text-justify">{{ project.description }}</p>
+            } @else {
+            <p class="text-justify">To be updated soon...</p>
+            } @if(project.technologies){
+            <div class="tags-block">
+              <div class="block-title">
+                <h3>Technology</h3>
+              </div>
+              <ul class="tags">
+                @for(tech of project.technologies; track $index){
+                <li>
+                  <span>{{ tech }}</span>
+                </li>
+                }
+              </ul>
+            </div>
+            }
+          </div>
+        </div>
       </div>
     </div>
-    <div class="mfp-preloader">Loading...</div>
   </div>
 </div>
-<p>project works!</p>
-<div class="sliphover-container" style="">
-    <a class="sliphover-overlay" href="#" target="_self" style="">
-      <div style="">this is a normal caption</div>
-    </a>
-  </div>
+}
