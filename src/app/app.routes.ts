@@ -59,7 +59,7 @@ export const routes: Routes = [
           ),
         children: [
           {
-            path: 'project/:id',
+            path: ':id',
             loadComponent: () =>
               import('./portfolio/project/project.component').then(
                 (c) => c.ProjectComponent
