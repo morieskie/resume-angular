@@ -5,11 +5,12 @@ import { ProjectInterface } from '../shared/interfaces/project.interface';
 import { selectProject } from '../../store/state/resume.selectors';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NgOptimizedImage } from '@angular/common';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { DirectionAwareHoverComponent } from '../shared/components/direction-aware-hover/direction-aware-hover.component';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [SectionComponent, RouterModule],
+  imports: [SectionComponent, RouterModule, DirectionAwareHoverComponent],
   providers: [NgOptimizedImage],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.css',
