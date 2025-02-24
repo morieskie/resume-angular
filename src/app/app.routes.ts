@@ -51,10 +51,22 @@ export const routes: Routes = [
           },
         ],
       },
-      // {
-      //   path: 'portfolio',
-      //   component: PortfolioComponent
-      // },
+      {
+        path: 'portfolio',
+        loadComponent: () =>
+          import('./portfolio/portfolio.component').then(
+            (c) => c.PortfolioComponent
+          ),
+        children: [
+          {
+            path: ':id',
+            loadComponent: () =>
+              import('./portfolio/project/project.component').then(
+                (c) => c.ProjectComponent
+              ),
+          },
+        ],
+      },
       // {
       //   path: 'contact',
       //   component: ContactComponent

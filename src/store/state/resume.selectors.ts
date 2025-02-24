@@ -30,3 +30,10 @@ export const selectTechnology = createSelector(
     return state.technology;
   }
 );
+
+export const selectProject = createSelector(
+  selectResumeState,
+  (state: ResumeState) => {
+    return state.project.filter((p) => p.id !== 22);
+  }
+);

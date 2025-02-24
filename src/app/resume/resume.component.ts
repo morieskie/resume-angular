@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
 import { SectionComponent } from '../shared/components/section/section.component';
-import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import {
+  ActivatedRoute,
+  Router,
+  RouterModule
+} from '@angular/router';
 import {
   animate,
   state,
   style,
   transition,
   trigger,
-  query,
 } from '@angular/animations';
 import { MenuLinkComponent } from '../shared/components/menu-link/menu-link.component';
 

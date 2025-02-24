@@ -1,0 +1,41 @@
+<app-section label="Portfolio" icon="suitcase" path="portfolio">
+  <!-- <div
+    class="ui labeled icon three item stackable menu"
+    id="filter-portfolio-group"
+    data-anim-effect="fadeInDown"
+  >
+    <a class="item active" data-group="all"> All </a>
+    <a class="item" data-group="web"> Web </a>
+    <a class="item" data-group="tech"> Tech </a>
+  </div> -->
+  <div
+    id="portfolio_container"
+    class="ui three column doubling stackable grid container"
+  >
+    @if (projects) { @for(project of projects; track $index) {
+    <div class="portfolio_item column" data-groups="web">
+      <figure data-anim-effect="zoomIn">
+        <app-direction-aware-hover
+          classes="open-popup-link"
+          path="{{ project.id }}"
+        >
+          <img
+            [src]="project.imgUrl"
+            [title]="project.project"
+            [alt]="project.altTitle"
+            [width]="268"
+            [height]="210"
+          />
+          <div>
+            <h5 class="name">{{ project.project }}</h5>
+            <small>{{ project.categories.slice(0, 1).join(", ") }}</small>
+            <i class="icon file"></i>
+          </div>
+        </app-direction-aware-hover>
+      </figure>
+    </div>
+    } }
+  </div>
+</app-section>
+
+<router-outlet />

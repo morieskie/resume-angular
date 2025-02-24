@@ -2,6 +2,7 @@ import { createReducer, on } from '@ngrx/store';
 import {
   educationRetrieved,
   experienceRetrieved,
+  projectRetrieved,
   technologyRetrieved,
   testimonyRetrieved,
 } from './resume.actions';
@@ -20,5 +21,9 @@ export const resumeReducer = createReducer(
   on(technologyRetrieved, (_state, { technology }) => ({
     ..._state,
     technology,
+  })),
+  on(projectRetrieved, (_state, { project }) => ({
+    ..._state,
+    project,
   }))
 );

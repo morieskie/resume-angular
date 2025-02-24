@@ -1,9 +1,9 @@
 import { Component, computed, input } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-menu-link',
-  imports: [RouterModule],
+  imports: [RouterLink],
   templateUrl: './menu-link.component.html',
   styleUrl: './menu-link.component.css',
 })

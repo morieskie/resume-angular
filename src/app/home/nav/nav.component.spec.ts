@@ -1,8 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavComponent } from './nav.component';
-import { provideRouter, RouterModule } from '@angular/router';
-import { MockHomeComponent } from '../../mocks/mock-home.component';
+import { provideRouter } from '@angular/router';
 import { mockRoutes } from '../../mocks/mock-routes';
 
 describe('NavComponent', () => {
