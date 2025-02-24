@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ActivatedRoute, Router } from '@angular/router';
-import { of } from 'rxjs';
+import { provideRouter } from '@angular/router';
 import { signal } from '@angular/core';
 import DirectionAwareHover from './direction-aware-hover';
 import { DirectionAwareHoverComponent } from './direction-aware-hover.component';
@@ -9,8 +8,7 @@ describe('DirectionAwareHoverComponent', () => {
   let component: DirectionAwareHoverComponent;
   let fixture: ComponentFixture<DirectionAwareHoverComponent>;
   let mockHover: jasmine.SpyObj<DirectionAwareHover>;
-  let mockRouter: jasmine.SpyObj<Router>;
-  let mockActivatedRoute: jasmine.SpyObj<ActivatedRoute>;
+  let dah: DirectionAwareHover;
 
   beforeEach(() => {
     mockHover = jasmine.createSpyObj('DirectionAwareHover', [
@@ -18,22 +16,17 @@ describe('DirectionAwareHoverComponent', () => {
       'mouseOut',
     ]);
 
-    mockRouter = jasmine.createSpyObj('Router', ['navigate']);
-
-    mockActivatedRoute = jasmine.createSpyObj('ActivatedRoute', [], {
-      snapshot: {
-        params: of({}),
-      },
-    });
-
     TestBed.configureTestingModule({
       imports: [DirectionAwareHoverComponent],
       providers: [
-        Router,
-        { provide: ActivatedRoute, useValue: mockActivatedRoute },
+        provideRouter([]),
+        // {
+        //   provide: DirectionAwareHover,
+        //   useFactory: () => mockHover,
+        // },
       ],
     })
-      .overrideProvider(DirectionAwareHover, { useValue: mockHover })
+      .overrideProvider(DirectionAwareHover, { useFactory: () => mockHover })
       .compileComponents();
 
     fixture = TestBed.createComponent(DirectionAwareHoverComponent);
@@ -57,7 +50,6 @@ describe('DirectionAwareHoverComponent', () => {
 
   it('should call mouseOut when onMouseLeave is triggered', () => {
     const mockEvent = { clientX: 100, clientY: 100, currentTarget: {} };
-
     component.onMouseLeave(mockEvent);
 
     expect(mockHover.mouseOut).toHaveBeenCalledWith(mockEvent);

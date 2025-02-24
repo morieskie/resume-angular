@@ -2,16 +2,13 @@ import { Component, input } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 
 import DirectionAwareHover from './direction-aware-hover';
+import { provideDirectionAwareHover } from './direction-aware-hover.provider';
 
 @Component({
   selector: 'app-direction-aware-hover',
   imports: [RouterModule],
   providers: [
-    {
-      provide: DirectionAwareHover,
-      useFactory: (options: { inverse: boolean }) =>
-        new DirectionAwareHover(options),
-    },
+    provideDirectionAwareHover()
   ],
   templateUrl: './direction-aware-hover.component.html',
   styleUrl: './direction-aware-hover.component.css',
