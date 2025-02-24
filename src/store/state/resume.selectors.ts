@@ -34,6 +34,6 @@ export const selectTechnology = createSelector(
 export const selectProject = createSelector(
   selectResumeState,
   (state: ResumeState) => {
-    return state.project;
+    return state.project.filter((p) => p.id !== 22);
   }
 );
