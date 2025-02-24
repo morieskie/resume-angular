@@ -1,6 +1,6 @@
 import { Component, computed, signal } from '@angular/core';
 import { NavComponent } from './nav/nav.component';
-import { RouterModule } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { ShareComponent } from '../shared/components/share/share.component';
 import { TextRotateComponent } from '../shared/components/text-rotate/text-rotate.component';
 import { forkJoin, take } from 'rxjs';
@@ -20,7 +20,12 @@ import { ProjectService } from '../shared/service/project.service';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterModule, NavComponent, ShareComponent, TextRotateComponent],
+  imports: [
+    RouterOutlet,
+    NavComponent,
+    ShareComponent,
+    TextRotateComponent,
+  ],
   providers: [ExperienceService],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
