@@ -21,10 +21,6 @@ export class DirectionAwareHoverComponent {
   path = input.required<string>();
   constructor(private hover: DirectionAwareHover, private router: Router) {}
 
-  onNavigate() {
-    this.router.navigate([this.path()]);
-  }
-
   onMouseEnter(e: any) {
     return this.hover.mouseOver(e);
   }
