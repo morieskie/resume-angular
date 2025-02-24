@@ -7,6 +7,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { IMAGE_CONFIG, NgOptimizedImage } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { DirectionAwareHoverComponent } from '../shared/components/direction-aware-hover/direction-aware-hover.component';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-portfolio',
@@ -35,5 +36,10 @@ export class PortfolioComponent {
       .select(selectProject)
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((projects) => (this.projects = projects));
+  }
+
+  imagePath(src: string) {
+    const { baseApiUrl, baseHref }: any = environment;
+    return baseHref.length ? `${baseHref}/${src}` : src;
   }
 }

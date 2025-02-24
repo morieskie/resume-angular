@@ -14,6 +14,7 @@ import {
   CarouselItemComponent,
   ThemeDirective,
 } from '@coreui/angular';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-project',
@@ -91,4 +92,8 @@ export class ProjectComponent implements OnInit {
     this.project = this.projects[next];
     this.images.set(this.project.images);
   }
+    imagePath(src: string) {
+      const { baseApiUrl, baseHref }: any = environment;
+      return baseHref.length ? `${baseHref}/${src}` : src;
+    }
 }
