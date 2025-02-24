@@ -1,5 +1,5 @@
 <app-section label="Portfolio" icon="suitcase" path="portfolio">
-  <div
+  <!-- <div
     class="ui labeled icon three item stackable menu"
     id="filter-portfolio-group"
     data-anim-effect="fadeInDown"
@@ -7,7 +7,7 @@
     <a class="item active" data-group="all"> All </a>
     <a class="item" data-group="web"> Web </a>
     <a class="item" data-group="tech"> Tech </a>
-  </div>
+  </div> -->
   <div
     id="portfolio_container"
     class="ui three column doubling stackable grid container"
@@ -17,7 +17,7 @@
       <figure data-anim-effect="zoomIn">
         <app-direction-aware-hover
           classes="open-popup-link"
-          path="portfolio/{{ project.id }}"
+          path="{{ project.id }}"
         >
           <img
             [src]="project.imgUrl"

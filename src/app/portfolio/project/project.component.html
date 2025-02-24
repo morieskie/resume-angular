@@ -1,17 +1,9 @@
 @if(project){
-<div
-  class="ui fullscreen modal"
-  style="
-    display: block;
-    visibility: visible;
-    background-color: black;
-    z-index: 1001;
-  "
->
+<div class="ui fullscreen modal" style="display: block; z-index: 1001">
   <div id="page-ajax-loaded" class="page-portfolio-loaded animated">
     <div class="ajax-page-wrapper">
       <div class="ajax-page-nav">
-        <div class="nav-item ajax-page-prev-next">
+        <div class="nav-item ajax-page-prev-next" style="display: none">
           <a class="ajax-page-load" (click)="onPrev()">
             <i class="zmdi icon chevron left"></i>
           </a>
@@ -34,36 +26,42 @@
         <div class="row">
           <div class="ten wide column portfolio-block">
             <div class="owl-carousel portfolio-page-carousel">
-              <div class="owl-stage-outer">
-                <div class="item">
-                  <c-carousel [dark]="true" [wrap]="true">
+              <c-carousel [dark]="true" [wrap]="true">
+                <div class="owl-stage-outer" style="min-height: 250px">
+                  <c-carousel-inner>
                     <c-carousel-indicators></c-carousel-indicators>
-                    <c-carousel-inner>
-                      @for(img of project.images; track $index; ) {
-                      <c-carousel-item>
+                    @if(images()){ 
+                      @for(img of images(); track $index;) {
+                      <c-carousel-item class="item">
                         <img
                           [src]="img"
                           [alt]="project.altTitle"
                           class="d-block w-100"
-                          loading="lazy"
+                          [height]="600"
+                          loading="eager"
                           style="min-height: 600px"
                         />
                       </c-carousel-item>
-                      }
-                    </c-carousel-inner>
+                      } 
+                    }
+                  </c-carousel-inner>
+                </div>
+                @if(images().length > 1) {
+                  <div className="owl-nav">
                     <c-carousel-control
                       [routerLink]
                       caption="Previous"
                       direction="prev"
-                    ></c-carousel-control>
+                    >
+                    </c-carousel-control>
                     <c-carousel-control
                       [routerLink]
                       caption="Next"
                       direction="next"
                     ></c-carousel-control>
-                  </c-carousel>
-                </div>
-              </div>
+                  </div>
+                }
+              </c-carousel>
             </div>
           </div>
 

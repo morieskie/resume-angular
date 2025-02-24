@@ -4,14 +4,23 @@ import { Store } from '@ngrx/store';
 import { ProjectInterface } from '../shared/interfaces/project.interface';
 import { selectProject } from '../../store/state/resume.selectors';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { NgOptimizedImage } from '@angular/common';
+import { IMAGE_CONFIG, NgOptimizedImage } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { DirectionAwareHoverComponent } from '../shared/components/direction-aware-hover/direction-aware-hover.component';
 
 @Component({
   selector: 'app-portfolio',
   imports: [SectionComponent, RouterModule, DirectionAwareHoverComponent],
-  providers: [NgOptimizedImage],
+  providers: [
+    NgOptimizedImage,
+    {
+      provide: IMAGE_CONFIG,
+      useValue: {
+        disableImageSizeWarning: true,
+        disableImageLazyLoadWarning: true,
+      },
+    },
+  ],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.css',
 })

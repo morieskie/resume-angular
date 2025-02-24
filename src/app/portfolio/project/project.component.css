@@ -254,10 +254,6 @@
   }
   /* /Tags Block */
 
-  .carousel-control-next {
-    right: -50px;
-}
-
-.carousel-control-prev {
-    left: -56px;
-}
+/* .visually-hidden.ng-star-inserted{
+    visibility: hidden !important;
+} */
