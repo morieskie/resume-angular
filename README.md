@@ -10,11 +10,33 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://raw.githubusercontent.com/morieskie/resume-angular/88ce110371f8884e98370586b22594416e702784/screenshots/about.png" alt="project-screenshot" width="400" height="400/">
+<img src="https://raw.githubusercontent.com/morieskie/resume-angular/88ce110371f8884e98370586b22594416e702784/screenshots/about.png" alt="project-screenshot" width="200" height="150/">
 
-<img src="https://raw.githubusercontent.com/morieskie/resume-angular/88ce110371f8884e98370586b22594416e702784/screenshots/projects.png" alt="project-screenshot" width="400" height="400/">
+<img src="https://raw.githubusercontent.com/morieskie/resume-angular/88ce110371f8884e98370586b22594416e702784/screenshots/projects.png" alt="project-screenshot" width="200" height="159/">
 
-<img src="https://raw.githubusercontent.com/morieskie/resume-angular/88ce110371f8884e98370586b22594416e702784/screenshots/skills.png" alt="project-screenshot" width="400" height="400/">
+<img src="https://raw.githubusercontent.com/morieskie/resume-angular/88ce110371f8884e98370586b22594416e702784/screenshots/skills.png" alt="project-screenshot" width="200" height="150/">
+
+  
+  
+<h2>🧐 Features</h2>
+
+Here're some of the project's best features:
+
+*   Page animations
+*   Serverside rendering
+*   Charts
+*   Unit Testing
+*   Standalone Components
+*   Zoneless Components
+*   Dynamic rendering
+*   Redux Pattern with NgRx
+*   Angular Signals
+*   Angular Animations
+*   State Actions
+*   State Reducers
+*   State Selectors
+*   Chart.js
+*   Semantic UI
 
 <h2>🛠️ Installation Steps:</h2>
 
