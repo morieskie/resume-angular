@@ -1,59 +1,97 @@
-# ResumeAngular19
+<h1 align="center" id="title">Angular v19 Resume</h1>
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.7.
+<p align="center"><img src="https://socialify.git.ci/morieskie/resume-angular/image?language=1&amp;name=1&amp;owner=1&amp;stargazers=1&amp;theme=Light" alt="project-image"></p>
 
-## Development server
+<p id="description">Online resume created with Angular v19 Signals Standalone Components NgRx SSR CSR and more</p>
 
-To start a local development server, run:
+<h2>🚀 Demo</h2>
 
-```bash
-ng serve
+[https://morieskie.github.io/resume-angular](https://morieskie.github.io/resume-angular)
+
+<h2>Project Screenshots:</h2>
+
+<img src="https://raw.githubusercontent.com/morieskie/resume-angular/88ce110371f8884e98370586b22594416e702784/screenshots/about.png" alt="project-screenshot" width="400" height="400/">
+
+<img src="https://raw.githubusercontent.com/morieskie/resume-angular/88ce110371f8884e98370586b22594416e702784/screenshots/projects.png" alt="project-screenshot" width="400" height="400/">
+
+<img src="https://raw.githubusercontent.com/morieskie/resume-angular/88ce110371f8884e98370586b22594416e702784/screenshots/skills.png" alt="project-screenshot" width="400" height="400/">
+
+<h2>🛠️ Installation Steps:</h2>
+
+<p>1. Clone repo</p>
+
+```
+git clone https://github.com/morieskie/resume-angular.git
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+<p>2. Go into project root folder</p>
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+cd resume-angular
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+<p>3. Install dependencies</p>
 
-```bash
-ng generate --help
+```
+npm install
 ```
 
-## Building
+<p>4. Run unit tests</p>
 
-To build the project run:
-
-```bash
-ng build
+```
+npm test
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+<p>5. Building the project bundles</p>
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+```
+npm run build
 ```
 
-## Running end-to-end tests
+<p>6. Preview project</p>
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
+```
+npm start
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+<h2>🍰 Contribution Guidelines:</h2>
 
-## Additional Resources
+No contribution required this was just me playing around with Angular v19 standalone components signals Zoneless components animations NgRx and more that Angular 19 comes with
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+  
+  
+<h2>💻 Built with</h2>
+
+Technologies used in the project:
+
+*   NgRx
+*   Typescript
+*   Signals
+*   Standalone Components
+*   RxJs
+*   Interceptos
+*   Pipes
+*   Components
+*   Semantic UI
+*   Chart.js
+*   Angular cdk
+*   SSR
+*   CSR
+*   Express
+*   JSON
+*   HttpClient
+*   JavaScript
+*   CSS
+*   HTML
+*   Webpack
+*   Jest
+*   Jasmine
+*   Karma
+
+<h2>🛡️ License:</h2>
+
+This project is licensed under the MIT
+
+<h2>💖Like my work?</h2>
+
+Share my profile with recruiters so I can get hired
