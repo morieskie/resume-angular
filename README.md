@@ -1,6 +1,6 @@
 <h1 align="center" id="title">Angular v19 Resume</h1>
 
-<p align="center"><img src="https://socialify.git.ci/morieskie/resume-angular/image?language=1&amp;name=1&amp;owner=1&amp;stargazers=1&amp;theme=Light" alt="project-image"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/morieskie/resume-angular/88ce110371f8884e98370586b22594416e702784/screenshots/skills.png" alt="project-image"></p>
 
 <p id="description">Online resume created with Angular v19 Signals Standalone Components NgRx SSR CSR and more</p>
 
