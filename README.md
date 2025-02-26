@@ -10,11 +10,10 @@
 
 <h2>Project Screenshots:</h2>
 
-<p align="left"><img src="https://raw.githubusercontent.com/morieskie/resume-angular/88ce110371f8884e98370586b22594416e702784/screenshots/about.png" alt="project-screenshot" width="200" height="150/"></p>
-
-<p align="center"><img src="https://raw.githubusercontent.com/morieskie/resume-angular/88ce110371f8884e98370586b22594416e702784/screenshots/projects.png" alt="project-screenshot" width="200" height="159/"></p>
-
-<p align="right"><img src="https://raw.githubusercontent.com/morieskie/resume-angular/88ce110371f8884e98370586b22594416e702784/screenshots/skills.png" alt="project-screenshot" width="200" height="150/"></p
+<p align="left"><img src="https://raw.githubusercontent.com/morieskie/resume-angular/88ce110371f8884e98370586b22594416e702784/screenshots/about.png" alt="project-screenshot" width="200" height="150/">
+&nbsp;<img src="https://raw.githubusercontent.com/morieskie/resume-angular/88ce110371f8884e98370586b22594416e702784/screenshots/projects.png" alt="project-screenshot" width="200" height="159/">
+&nbsp;<img src="https://raw.githubusercontent.com/morieskie/resume-angular/88ce110371f8884e98370586b22594416e702784/screenshots/skills.png" alt="project-screenshot" width="200" height="150/">
+</p>
 
   
   
