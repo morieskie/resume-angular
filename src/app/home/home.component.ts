@@ -17,15 +17,11 @@ import { ExperienceService } from '../shared/service/experience.service';
 import { TestimonialService } from '../shared/service/testimonial.service';
 import { TechnologyService } from '../shared/service/technology.service';
 import { ProjectService } from '../shared/service/project.service';
+import { ProfileService } from '../shared/service/profile.service';
 
 @Component({
   selector: 'app-home',
-  imports: [
-    RouterOutlet,
-    NavComponent,
-    ShareComponent,
-    TextRotateComponent,
-  ],
+  imports: [RouterOutlet, NavComponent, ShareComponent, TextRotateComponent],
   providers: [ExperienceService],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
@@ -33,12 +29,13 @@ import { ProjectService } from '../shared/service/project.service';
 export class HomeComponent {
   positions: string[] = [];
   roles = computed(() => this.positions);
-  user = signal({ name: 'Derick Fynn' });
+  user = signal({ name: '' });
   data = computed(() => {
     return { ...this.user(), roles: this.roles };
   });
 
   constructor(
+    private profileService: ProfileService,
     private educationService: EducationService,
     private experienceService: ExperienceService,
     private testimonyService: TestimonialService,
@@ -49,6 +46,7 @@ export class HomeComponent {
 
   ngOnInit() {
     forkJoin({
+      profile: this.profileService.getDetails(),
       education: this.educationService.getData(),
       experience: this.experienceService.getData(),
       testimony: this.testimonyService.getData(),
@@ -57,7 +55,15 @@ export class HomeComponent {
     })
       .pipe(take(1))
       .subscribe(
-        ({ education, experience, testimony, technology, project }) => {
+        ({
+          profile,
+          education,
+          experience,
+          testimony,
+          technology,
+          project,
+        }) => {
+          this.user.set({ name: profile.name.firstName });
           this.store.dispatch(educationRetrieved({ education }));
           this.store.dispatch(experienceRetrieved({ experience }));
           this.store.dispatch(testimonyRetrieved({ testimony }));

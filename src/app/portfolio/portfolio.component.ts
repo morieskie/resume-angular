@@ -1,4 +1,4 @@
-import { Component, DestroyRef, inject } from '@angular/core';
+import { AfterViewInit, Component, DestroyRef, inject } from '@angular/core';
 import { SectionComponent } from '../shared/components/section/section.component';
 import { Store } from '@ngrx/store';
 import { ProjectInterface } from '../shared/interfaces/project.interface';
@@ -8,6 +8,8 @@ import { IMAGE_CONFIG, NgOptimizedImage } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { DirectionAwareHoverComponent } from '../shared/components/direction-aware-hover/direction-aware-hover.component';
 import { environment } from '../../environments/environment';
+import { ProjectService } from '../shared/service/project.service';
+import { projectRetrieved } from '../../store/state/resume.actions';
 
 @Component({
   selector: 'app-portfolio',
